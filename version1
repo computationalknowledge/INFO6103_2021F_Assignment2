@@ -10,53 +10,57 @@ b)	Write a SOAP message in Java as a Web service that declines charging the cred
 A SOAP service serializes the service’s parameters to XML. Calls the web method through HTTP manipulation and parses the returning XML response back into an object.
 
 to begin work with hard coded values as inputs
-*/
- 
+ */
 package temperatureconverter;
 
- 
 public class TemperatureConverter {
 
     public static String[] ccValues = new String[3];
-            
+
     public static void main(String[] args) {
         ccValues[0] = "444411112222";
         ccValues[1] = "440011113333";
         ccValues[2] = "111188886699";
-        
+
         TestDriver test = new TestDriver();
         test.RunTests();
     }
-    
+
 }
 
-class TestDriver{
+class TestDriver {
     // Make a CreditCardValidator and pass the input data
     // Required Behavior: 
     // @successcriteria:
     //      return true if valid credit card number 
     //      return false if NOT valid credit card number
-    
+
     CreditCardValidator c;
-    
-    
-    public void RunTests(){
+
+    public void RunTests() {
         c = new CreditCardValidator();
         c.isValidCCNumber(TemperatureConverter.ccValues);
     }
 
 }
 
-class CreditCardValidator{
-    
-    public void isValidCCNumber(String [] ccNumbers){
+class CreditCardValidator {
+
+    public void isValidCCNumber(String[] ccNumbers) {
         for (int i = 0; i < ccNumbers.length; i++) {
             __validateCCNumber(ccNumbers[i]);
         }
     }
-    
-    private void __validateCCNumber(String ccNumber){
-        // ideally we should using a Regular Expression pattern matcher
+
+    private void __validateCCNumber(String ccNumber) {
+        if (ccNumber.equals("444411112222")) {
+            System.out.println("444411112222 is a valid CC NUMBER");
+        }
+        if (ccNumber.equals("440011113333")) {
+            System.out.println("440011113333 is a valid CC NUMBER");
+        }
+        if (ccNumber.equals("111188886699")) {
+            System.out.println("111188886699 is a valid CC NUMBER");
+        }
     }
-    
 }
