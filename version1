@@ -1,0 +1,33 @@
+/*Part 1
+
+Use the following credit card values for valid numbers: 444411112222, 440011113333, 111188886699
+Any other number will be invalid.
+
+Your Java Web service application will be one SOAP related code with two parts:
+
+a)	Write a SOAP program in Java as a Web service that charges the credit card of a traveler that made a reservation for a particular trip. (Show message that it charged the credit card)
+b)	Write a SOAP message in Java as a Web service that declines charging the credit card of a client due to an invalid card number.
+A SOAP service serializes the service’s parameters to XML. Calls the web method through HTTP manipulation and parses the returning XML response back into an object.
+
+to begin work with hard coded values as inputs
+*/
+ 
+package temperatureconverter;
+
+ 
+public class TemperatureConverter {
+
+    public static String[] ccValues = new String[3];
+            
+    public static void main(String[] args) {
+        ccValues[0] = "444411112222";
+        ccValues[1] = "440011113333";
+        ccValues[2] = "111188886699";
+        
+    }
+    
+}
+
+class CreditCardValidator{
+    
+}
