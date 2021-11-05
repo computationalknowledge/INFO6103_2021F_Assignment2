@@ -24,10 +24,39 @@ public class TemperatureConverter {
         ccValues[1] = "440011113333";
         ccValues[2] = "111188886699";
         
+        TestDriver test = new TestDriver();
+        test.RunTests();
     }
     
 }
 
+class TestDriver{
+    // Make a CreditCardValidator and pass the input data
+    // Required Behavior: 
+    // @successcriteria:
+    //      return true if valid credit card number 
+    //      return false if NOT valid credit card number
+    
+    CreditCardValidator c;
+    
+    
+    public void RunTests(){
+        c = new CreditCardValidator();
+        c.isValidCCNumber(TemperatureConverter.ccValues);
+    }
+
+}
+
 class CreditCardValidator{
+    
+    public void isValidCCNumber(String [] ccNumbers){
+        for (int i = 0; i < ccNumbers.length; i++) {
+            __validateCCNumber(ccNumbers[i]);
+        }
+    }
+    
+    private void __validateCCNumber(String ccNumber){
+        // ideally we should using a Regular Expression pattern matcher
+    }
     
 }
