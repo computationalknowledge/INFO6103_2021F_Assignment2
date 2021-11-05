@@ -45,7 +45,11 @@ class TestDriver {
 }
 
 class CreditCardValidator {
-
+    // #todo:
+    // take this code:
+    // use a better data structure (better than array, probably a MAP would work well)
+    // to make the validation procedure
+    
     public void isValidCCNumber(String[] ccNumbers) {
         for (int i = 0; i < ccNumbers.length; i++) {
             __validateCCNumber(ccNumbers[i]);
